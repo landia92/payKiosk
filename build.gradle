@@ -21,6 +21,7 @@ configurations {
 
 repositories {
 	mavenCentral()
+	maven {url 'https://jitpack.io'}
 }
 
 dependencies {
@@ -31,6 +32,38 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	// jsp 문법 해석용 tag library (JSTL) 제공
+	implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.0'
+	// jsp -> servlet 변환
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+
+	implementation 'com.h2database:h2'
+
+	// https://mvnrepository.com/artifact/org.mybatis/mybatis
+	implementation 'org.mybatis:mybatis:3.5.16'
+
+	// https://mvnrepository.com/artifact/org.json/json
+	implementation 'org.json:json:20240303'
+
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+	// 아임포트 관련 //
+	// https://mvnrepository.com/artifact/com.github.iamport/iamport-rest-client-java
+	implementation group: 'com.github.iamport', name: 'iamport-rest-client-java', version: '0.2.23'
+	// https://mvnrepository.com/artifact/com.squareup.retrofit2/adapter-rxjava2
+	implementation 'com.squareup.retrofit2:adapter-rxjava2:2.11.0'
+	// https://mvnrepository.com/artifact/com.google.code.gson/gson
+	implementation 'com.google.code.gson:gson:2.11.0'
+	// https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
+	implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+	// https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson
+	implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
 }
 
 tasks.named('test') {

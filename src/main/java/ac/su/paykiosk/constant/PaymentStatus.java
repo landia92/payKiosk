@@ -1,2 +1,7 @@
-package ac.su.paykiosk.constant;public class PaymentStatus {
+package ac.su.paykiosk.constant;
+
+public enum PaymentStatus {
+    OK,
+    READY,
+    CANCEL
 }
