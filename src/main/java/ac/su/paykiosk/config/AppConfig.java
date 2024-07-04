@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    String apiKey = "";
-    String secretKey = "";
+    String apiKey = "Rest API Key";
+    String secretKey = "Rest API Secret";
 
     @Bean
     public IamportClient iamportClient() {
